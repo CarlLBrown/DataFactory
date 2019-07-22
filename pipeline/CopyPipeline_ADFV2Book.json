@@ -41,7 +41,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_dn0",
+						"referenceName": "DS_Source_Azure_WWI_CustomersTop100",
 						"type": "DatasetReference"
 					}
 				],

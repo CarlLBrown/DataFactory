@@ -1,6 +1,7 @@
 {
-	"name": "SourceDataset_dn0",
+	"name": "DS_Source_Azure_WWI_CustomersTop100",
 	"properties": {
+		"description": "Top 100 customers from Wide World Importers DB.",
 		"linkedServiceName": {
 			"referenceName": "Source_SQLAzure_wwimporters",
 			"type": "LinkedServiceReference"
