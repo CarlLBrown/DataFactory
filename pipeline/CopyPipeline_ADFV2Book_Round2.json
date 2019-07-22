@@ -1,0 +1,57 @@
+{
+	"name": "CopyPipeline_ADFV2Book_Round2",
+	"properties": {
+		"description": "First time didn't seem to produce results, so let's try again!",
+		"activities": [
+			{
+				"name": "Copy_dhd",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Destination",
+						"value": "wwicontainer//WWI_Top100Customers_Round2"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT TOP 100  [CustomerID]\r\n,[CustomerName]\r\n,[CustomerCategoryName]\r\n,[PrimaryContact]\r\n,[AlternateContact]\r\n,[PhoneNumber]\r\n,[FaxNumber]\r\n,[BuyingGroupName]\r\n,[WebsiteURL]\r\n,[DeliveryMethod]\r\n,[CityName]\r\nFROM [Website].[Customers]"
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSetting"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSetting",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_dhd",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_dhd",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
