@@ -1,0 +1,68 @@
+{
+	"name": "DestinationDataset_dn0",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Destination_BlobStorage_CustomersTop100",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "website-customer",
+				"container": "database-bacpac"
+			},
+			"columnDelimiter": "|",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "CustomerID",
+				"type": "String"
+			},
+			{
+				"name": "CustomerName",
+				"type": "String"
+			},
+			{
+				"name": "CustomerCategoryName",
+				"type": "String"
+			},
+			{
+				"name": "PrimaryContact",
+				"type": "String"
+			},
+			{
+				"name": "AlternateContact",
+				"type": "String"
+			},
+			{
+				"name": "PhoneNumber",
+				"type": "String"
+			},
+			{
+				"name": "FaxNumber",
+				"type": "String"
+			},
+			{
+				"name": "BuyingGroupName",
+				"type": "String"
+			},
+			{
+				"name": "WebsiteURL",
+				"type": "String"
+			},
+			{
+				"name": "DeliveryMethod",
+				"type": "String"
+			},
+			{
+				"name": "CityName",
+				"type": "String"
+			}
+		]
+	}
+}
