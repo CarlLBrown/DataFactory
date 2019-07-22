@@ -47,7 +47,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_dn0",
+						"referenceName": "DS_Destination_AzureBlobStorage",
 						"type": "DatasetReference"
 					}
 				]

@@ -1,5 +1,5 @@
 {
-	"name": "DestinationDataset_dn0",
+	"name": "DS_Destination_AzureBlobStorage",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Destination_BlobStorage_CustomersTop100",
