@@ -1,0 +1,13 @@
+{
+	"name": "Destination_BlobStorage_CustomersTop100",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "Pulls top 100 customers from the WWI - Standard database.   Then exports it to some Azure Blob Storage.  This is a test run, and has no value.",
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": "DefaultEndpointsProtocol=https;AccountName=adfv2bookstorageaccount;EndpointSuffix=core.windows.net;",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkFERlYyQk9PSy1EQVRBRkFDVE9SWV8yNmVmNjQ0Mi1jMDk1LTQ5ODQtYjgwMS0zNjZjYWFiZjM5MmEiDQp9"
+		}
+	}
+}
